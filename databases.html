@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databases — Hamad Alghaithi CS 499 ePortfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Hamad <span>Alghaithi</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code-review.html">Code Review</a></li>
+        <li><a href="software-engineering.html">Software Engineering</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="databases.html">Databases</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1>Enhancement Three: Databases</h1>
+  <p>iOS Inventory Management Application — Enterprise SwiftData Schema Design</p>
+</section>
+
+<main>
+
+  <!-- Tech Tags -->
+  <div class="section">
+    <div class="tech-tags">
+      <span class="tech-tag">SwiftData</span>
+      <span class="tech-tag">8-Entity Schema</span>
+      <span class="tech-tag">CRUD Operations</span>
+      <span class="tech-tag">Audit Logging</span>
+      <span class="tech-tag">Backup &amp; Restore</span>
+      <span class="tech-tag">Referential Integrity</span>
+      <span class="tech-tag">Role-Based Access</span>
+    </div>
+
+    <!-- Download Buttons -->
+    <div class="download-buttons">
+      <a href="#" class="btn btn-primary">⬇ Download Original Artifact</a>
+      <a href="#" class="btn btn-accent">⬇ Download Enhanced Artifact</a>
+    </div>
+  </div>
+
+  <!-- Course Outcomes -->
+  <div class="section">
+    <h2 class="section-title">Course Outcomes Addressed</h2>
+    <div class="outcomes">
+      <span class="outcome-badge">CO1 — Collaborative Environments</span>
+      <span class="outcome-badge">CO3 — Computing Solutions &amp; Trade-offs</span>
+      <span class="outcome-badge">CO4 — Innovative Techniques &amp; Tools</span>
+      <span class="outcome-badge">CO5 — Security Mindset</span>
+    </div>
+  </div>
+
+  <!-- Narrative -->
+  <div class="section narrative">
+
+    <h2>Artifact Description</h2>
+    <p>The artifact being referenced is the same application created in the last two enhancements — the iOS inventory management application. The original inventory management application was created in CS 360: Mobile Architecture and Programming with a basic database (SQLite) to track items with an item name, quantity, and timestamp.</p>
+    <p>The original database used a flat schema with no sophisticated relationship definitions or integrity checks between the various tables and there were no audit capabilities or consideration of backup mechanisms to protect the data, which was acceptable in the CS 360 course project, but the requirements of a fully-functioning production inventory management system are much different than a CS 360 course project.</p>
+
+    <h2>Justification for Inclusion</h2>
+    <p>I selected this artifact as it provides the best opportunity to demonstrate the skills I have gained in the development and enhancement of databases. Advanced database models are required when designing a modern inventory system.</p>
+    <p>The following areas provide evidence of my skills:</p>
+
+    <div class="info-box">
+      <h4>Comprehensive SwiftData Schema Design</h4>
+      <p>I have created a complete database schema containing eight interconnected entities: <code>Item</code>, <code>CategoryEntity</code>, <code>User</code>, <code>Branch</code>, <code>Supplier</code>, <code>AuditLogEntry</code>, <code>ItemImage</code>, and <code>StockTransfer</code>. All of these entities were carefully designed, with appropriate property definitions and relationships.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Entity Relationships with Referential Integrity</h4>
+      <p>I designed all entities with referential integrity using the <code>@Relationship</code> property wrapper in SwiftData. This creates valid relationships between the entities so the data contained in those relationships can be used correctly and efficiently in queries. Additionally, delete rules were created for each relationship type.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Complete CRUD Functionality</h4>
+      <p>I designed service classes for each entity to support all CRUD operations. The service class for each entity contains error handling, data validation, and audit logging capabilities consistent with the design and standards of the industry.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Comprehensive Audit Logging</h4>
+      <p><code>AuditLogEntry</code> entity and <code>AuditService</code> class functionality were designed to provide a complete auditing system. All significant activities conducted on the application are recorded in an audit log with a timestamp, associated user, and before/after values. This provides a method for ensuring compliance and the ability to monitor the security of the application.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Backup and Restore Functionality</h4>
+      <p>I have created a <code>BackupService</code> class for users of the application to back up and restore their data. The BackupService functionality allows users to back up their data, and in the event of data loss, users may restore their data.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Multiple Location Inventory Management</h4>
+      <p>The database design can support multiple locations of physical inventory, and allow for stock transfers between locations via the use of the <code>StockTransfer</code> entity and stock transfer status, and approval tracking.</p>
+    </div>
+
+    <h2>Reflection on Enhancement Process</h2>
+    <p>The most challenging yet rewarding component of designing and developing my database was enhancing the relationships within the database. I learned to view data in terms of how each piece of data relates to one another, the integrity of that data, and how to support the ongoing maintenance of the database for its entire lifespan.</p>
+
+    <h3>Over-Normalization of Data</h3>
+    <p>One of the largest challenges I faced was determining how much normalizing needed to take place in developing a schema while developing an efficient way to retrieve data. I had over-normalized my database, which resulted in my database producing complex queries and had performance issues, but eventually I was able to find the balance between normalizing and denormalizing my schema.</p>
+
+    <h3>Audit Logging Performance</h3>
+    <p>The second challenge I faced was implementing an audit logging functionality into my application without negatively impacting the performance of the application. I was able to accomplish this through implementing the Auditing system using asynchronous logging and batching audit log entries into batches where applicable.</p>
+
+    <h3>Incorporating Feedback</h3>
+    <p>I was able to improve my database by adding indexes on fields frequently queried due to feedback from code reviews, and creating the ability to soft-delete inventory item records, providing a way for users to recover deleted item records.</p>
+
+    <h2>Course Outcomes</h2>
+    <ul>
+      <li><strong>CO4:</strong> Demonstrates the ability to implement innovative techniques, skills, and tools to meet current business needs. My database was implemented using the latest persistence framework (SwiftData) and demonstrated how to meet the current needs of corporations when designing and developing an inventory management database.</li>
+      <li><strong>CO5:</strong> Creates a security mindset in the design of systems. I developed my database with security considerations throughout the application, including requiring secure password hashes, implementing role-based access control to data, creating an Auditing system for accountability, and utilizing encryption to protect sensitive data.</li>
+      <li><strong>CO3:</strong> Designs and evaluates computing solutions and manages the trade-offs between the design solutions. In designing my database, I was required to evaluate the trade-offs between normalizing and denormalizing the schema to decide whether to establish relationships between entities or embed data.</li>
+      <li><strong>CO1:</strong> Employs strategies to create collaboration environments. My database supports collaborative decision-making by allowing for multiple locations to access inventory, providing detailed auditing, allowing role-based access controls, generating reports and enabling multi-location inventory management.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>I have developed an enterprise-ready datasource via an 8-entity database schema with managed relationships, a complete auditing capability, a backup/restore capability, and multi-location management capabilities from a single-table SQLite database implementation — demonstrating my ability to design, develop and deploy functional operational database solutions to meet corporate business needs.</p>
+
+    <div class="info-box" style="margin-top:2rem;">
+      <h4>Hamad Alghaithi</h4>
+      <p>CS 499 Computer Science Capstone &bull; Southern New Hampshire University</p>
+    </div>
+  </div>
+
+  <!-- Schema Entity Cards -->
+  <div class="section">
+    <h2 class="section-title">Database Schema — 8 Entities</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h3>Item</h3>
+        <p>Core inventory entity with name, SKU, barcode, quantity, price, description, tags, and soft-delete support.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏷️</div>
+        <h3>CategoryEntity</h3>
+        <p>Hierarchical category structure for organizing inventory items with parent-child relationships.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👤</div>
+        <h3>User</h3>
+        <p>User accounts with hashed passwords, role assignments (Admin/Manager/Staff/Viewer), and biometric preferences.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏢</div>
+        <h3>Branch</h3>
+        <p>Physical location entities enabling multi-location inventory management and stock level tracking per site.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚚</div>
+        <h3>Supplier</h3>
+        <p>Supplier profiles linked to inventory items for procurement tracking and vendor management.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>AuditLogEntry</h3>
+        <p>Immutable audit records capturing all significant actions with timestamps, user attribution, and before/after state.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>ItemImage</h3>
+        <p>Image attachments for inventory items with metadata, supporting multiple images per item.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>StockTransfer</h3>
+        <p>Inter-branch stock transfer records with status tracking (pending/approved/completed) and approval workflows.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p class="footer-name">Hamad Alghaithi</p>
+  <p>Bachelor of Science in Computer Science &bull; Southern New Hampshire University</p>
+  <p>CS 499 Computer Science Capstone &bull; 2026</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

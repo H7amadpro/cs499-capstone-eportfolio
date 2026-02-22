@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Engineering — Hamad Alghaithi CS 499 ePortfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Hamad <span>Alghaithi</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="code-review.html">Code Review</a></li>
+        <li><a href="software-engineering.html">Software Engineering</a></li>
+        <li><a href="algorithms.html">Algorithms</a></li>
+        <li><a href="databases.html">Databases</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1>Enhancement One: Software Design &amp; Engineering</h1>
+  <p>iOS Inventory Management Application — Architecture &amp; Framework Modernization</p>
+</section>
+
+<main>
+
+  <!-- Tech Tags -->
+  <div class="section">
+    <div class="tech-tags">
+      <span class="tech-tag">Swift</span>
+      <span class="tech-tag">SwiftUI</span>
+      <span class="tech-tag">SwiftData</span>
+      <span class="tech-tag">MVVM Architecture</span>
+      <span class="tech-tag">Face ID / Touch ID</span>
+      <span class="tech-tag">CryptoKit</span>
+      <span class="tech-tag">iOS</span>
+    </div>
+
+    <!-- Download Buttons -->
+    <div class="download-buttons">
+      <a href="#" class="btn btn-primary">⬇ Download Original Artifact</a>
+      <a href="#" class="btn btn-accent">⬇ Download Enhanced Artifact</a>
+    </div>
+  </div>
+
+  <!-- Course Outcomes -->
+  <div class="section">
+    <h2 class="section-title">Course Outcomes Addressed</h2>
+    <div class="outcomes">
+      <span class="outcome-badge">CO1 — Collaborative Environments</span>
+      <span class="outcome-badge">CO4 — Innovative Techniques &amp; Tools</span>
+      <span class="outcome-badge">CO5 — Security Mindset</span>
+    </div>
+  </div>
+
+  <!-- Narrative -->
+  <div class="section narrative">
+
+    <h2>Artifact Description</h2>
+    <p>The artifact I selected for this enhancement is an iOS Inventory Management Application originally developed in CS 360: Mobile Architecture and Programming during my Computer Science program at Southern New Hampshire University. The original application was created as a basic inventory tracking tool that allowed users to add, view, and delete inventory items with minimal functionality. It was built using Swift and UIKit with a simple table view interface and basic SQLite database storage.</p>
+    <p>The original artifact represented a functional but limited approach to mobile application development. It lacked proper architectural patterns, had tightly coupled code, minimal error handling, and a dated user interface. While it fulfilled the basic requirements of the original course assignment, it did not reflect the professional standards expected in industry-level software development.</p>
+
+    <h2>Justification for Inclusion</h2>
+    <p>I selected this artifact for my ePortfolio because it presented an excellent opportunity to demonstrate significant growth in software design and engineering principles. The transformation from a basic inventory tracker to a comprehensive enterprise-level application showcases my ability to architect complex software systems following industry best practices.</p>
+    <p>The specific components that showcase my skills and abilities in software development include:</p>
+
+    <div class="info-box">
+      <h4>MVVM Architecture Implementation</h4>
+      <p>I completely restructured the application using the Model-View-ViewModel (MVVM) architectural pattern. This separation of concerns ensures that the user interface (Views) remains decoupled from business logic (ViewModels) and data models (Models). This architecture makes the codebase more maintainable, testable, and scalable.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Modern SwiftUI Framework</h4>
+      <p>I migrated the entire application from the legacy UIKit framework to SwiftUI, Apple's modern declarative UI framework. This migration demonstrates my ability to adapt to evolving technologies and leverage new tools to create more efficient and maintainable code.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Modular Code Organization</h4>
+      <p>The project follows a well-organized folder structure with clear separation between Models, Views, ViewModels, Services, and Utilities. Each component has a single responsibility, adhering to the SOLID principles of object-oriented design.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Comprehensive Error Handling</h4>
+      <p>I implemented robust error handling throughout the application using Swift's Result type and custom error enums. The application gracefully handles unexpected situations, providing meaningful feedback to users without crashing.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Professional Documentation</h4>
+      <p>Every file includes comprehensive header documentation, and complex functions include inline comments explaining the logic. This documentation practice demonstrates my understanding of collaborative development environments.</p>
+    </div>
+
+    <div class="info-box">
+      <h4>Reusable Components</h4>
+      <p>I created modular, reusable UI components such as ItemRowView, BranchPickerView, and ImagePicker that can be used throughout the application, reducing code duplication and ensuring consistency.</p>
+    </div>
+
+    <h2>Reflection on the Enhancement Process</h2>
+    <p>The process of enhancing this artifact taught me valuable lessons about software architecture and the importance of planning before coding. When I began the enhancement, I initially attempted to modify the existing codebase incrementally. However, I quickly realized that the tightly coupled nature of the original code made this approach impractical. This led me to make the strategic decision to rebuild the application from the ground up using proper architectural patterns.</p>
+
+    <h3>Challenges Faced</h3>
+    <p>One significant challenge was implementing the MVVM pattern correctly in SwiftUI. Unlike UIKit, where MVVM is straightforward, SwiftUI's reactive nature required me to carefully consider how data flows between components. I had to learn about property wrappers like <code>@StateObject</code>, <code>@ObservedObject</code>, and <code>@EnvironmentObject</code> to properly manage state and ensure the UI updates reactively when data changes.</p>
+    <p>Another challenge was migrating from SQLite to SwiftData while maintaining data integrity. I had to design a comprehensive data migration strategy and thoroughly test the new persistence layer to ensure no data loss during the transition.</p>
+
+    <h3>Feedback Incorporation</h3>
+    <p>Based on feedback from my code review, I made several improvements to the initial enhancement plan. I added more comprehensive input validation in the ViewModels to prevent invalid data from reaching the data layer. I also improved the error messages to be more user-friendly and actionable.</p>
+
+    <h2>Course Outcomes</h2>
+    <p>This enhancement addresses the following course outcomes:</p>
+    <ul>
+      <li><strong>Course Outcome 1:</strong> Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision making in the field of computer science. The well-documented, modularly organized codebase enables other developers to easily understand, maintain, and extend the application.</li>
+      <li><strong>Course Outcome 4:</strong> Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices. By adopting SwiftUI and SwiftData, I demonstrated my ability to leverage innovative tools to create modern, efficient applications.</li>
+      <li><strong>Course Outcome 5:</strong> Develop a security mindset that anticipates adversarial exploits in software architecture. The software design incorporates security considerations from the ground up, with separation of concerns preventing direct access to sensitive data from the UI layer.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>The Software Design and Engineering enhancement transformed a basic student project into a professionally architected application that demonstrates my readiness for industry-level software development. The skills showcased — architectural design, modern framework adoption, modular development, and professional documentation — are directly applicable to real-world software engineering positions.</p>
+
+    <div class="info-box" style="margin-top:2rem;">
+      <h4>Hamad Alghaithi</h4>
+      <p>CS 499 Computer Science Capstone &bull; Southern New Hampshire University</p>
+    </div>
+  </div>
+
+  <!-- Key Features -->
+  <div class="section">
+    <h2 class="section-title">Key Application Features</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🔐</div>
+        <h3>Secure Authentication</h3>
+        <p>Password hashing with CryptoKit and biometric login via Face ID / Touch ID for enhanced security and user convenience.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>Role-Based Access</h3>
+        <p>Admin, Manager, Staff, and Viewer roles with granular permission controls across all application features.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h3>Multi-Location Inventory</h3>
+        <p>Track inventory across multiple branch locations with real-time stock transfer capabilities and approval workflows.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📷</div>
+        <h3>Barcode / QR Scanning</h3>
+        <p>Integrated barcode and QR code scanning for fast item lookup and inventory updates without manual entry.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Real-Time Search</h3>
+        <p>Instant search and filtering across item names, SKUs, barcodes, descriptions, and tags with debounced performance optimization.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Audit Logging</h3>
+        <p>Comprehensive audit trail recording all significant actions with timestamps, user attribution, and before/after values.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p class="footer-name">Hamad Alghaithi</p>
+  <p>Bachelor of Science in Computer Science &bull; Southern New Hampshire University</p>
+  <p>CS 499 Computer Science Capstone &bull; 2026</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
