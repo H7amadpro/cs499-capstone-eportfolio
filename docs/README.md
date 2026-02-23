@@ -2,7 +2,7 @@
 
 **Southern New Hampshire University | Bachelor of Science in Computer Science | 2026**
 
-This repository hosts my CS 499 Computer Science Capstone ePortfolio, accessible at [https://h7amadpro.github.io/](https://h7amadpro.github.io/).
+This repository hosts my CS 499 Computer Science Capstone ePortfolio, accessible at [[https://h7amadpro.github.io/](https://h7amadpro.github.io/](https://h7amadpro.github.io/cs499-capstone-eportfolio/databases.html)).
 
 ## Pages
 
