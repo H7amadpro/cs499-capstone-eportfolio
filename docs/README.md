@@ -41,4 +41,4 @@ To enable GitHub Pages:
 3. Select **main** branch and **/ (root)** folder
 4. Click **Save**
 
-The site will be live at `https://h7amadpro.github.io/` within a few minutes.
+The site will be live at `[https://h7amadpro.github.io/](https://h7amadpro.github.io/cs499-capstone-eportfolio/databases.html )` within a few minutes.
